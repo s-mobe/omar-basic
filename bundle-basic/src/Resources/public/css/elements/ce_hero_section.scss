@@ -1,0 +1,134 @@
+// Desktop
+
+.ce_hero_section {
+    margin: 4vw 0vw;
+
+    @keyframes Rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  
+    @keyframes RotateR {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+  
+    .header {
+      color: white;
+    }
+  
+    .right-side, .box, .box.reverse, .text {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  
+    .box {
+      position: relative;
+      animation: Rotate 35s linear infinite;
+    }
+  
+    .box.reverse {
+      position: absolute;
+      animation: RotateR 25s linear infinite;
+    }
+
+    .left-side{
+      background-color: #000000;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+       /* background by SVGBackgrounds.com */
+
+
+       padding: 1vw;
+
+       border-radius: 3vw;
+     
+    }
+  
+
+    .text {
+      position: absolute;
+    }
+  
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5vw;
+    }
+
+    .buttons{
+      padding:1rem;
+      margin-top: 1vw;
+      padding-left: 0;
+      display:flex;
+      gap:1vw;
+
+      .button-white{
+        width:25dvh;
+        
+      }
+    }
+
+  }
+  
+  // Smaller screens ( Table, Small desktop )
+  @media only screen and (max-width: 1366px) {
+    .ce_hero_section {
+      .hero-section {
+        flex-wrap: wrap-reverse;
+      }
+      
+      .buttons{
+        text-align: center;
+        justify-content: center;
+        padding-left: 1rem;
+      }
+
+
+    }
+  }
+
+
+    // Mobile
+    @media only screen and (max-width: 780px) {
+      .ce_hero_section {
+
+        .wrapper{
+          width:100%;
+        }
+
+        .hero-section{
+          gap:0vw;
+        }
+        .left-side{
+          width:100%;
+        }
+
+        .box,.text{
+          height:250px;
+          width:250px;
+        }
+
+
+        .hero-section {
+          flex-wrap: wrap-reverse;
+        }
+        
+        .buttons{
+          text-align: center;
+          justify-content: center;
+          padding-left: 1rem;
+        }
+  
+  
+      }
+    }
