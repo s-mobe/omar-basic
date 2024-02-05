@@ -1,0 +1,27 @@
+---
+contao:
+  legacy_routing: false
+  image:
+    sizes:
+      sample:
+        width: 500
+        height: 500
+        resize_mode: crop
+        lazy_loading: true
+        formats:
+          jpg:
+            - webp
+            - jpg
+          png:
+            - webp
+            - png
+        items:
+          - media: '(max-width: 600px)'
+            width: 500
+            height: 500
+          - media: '(min-width: 601px)'
+            width: 500
+            height: 500
+          - media: '(min-width: 1024px)'
+            width: 500
+            height: 500

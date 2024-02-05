@@ -1,0 +1,33 @@
+
+<?php
+$GLOBALS['TL_CSS'][] = 'bundles/fouranglesbasic/css/elements/ce_hero_section.scss|static';
+
+?>
+
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('headline'); ?>
+<?php $this->endblock(); ?>
+
+<?php $this->block('content'); ?>
+
+<div class="wrapper">
+    
+<div class="hero-section">
+        <div class="left-side">
+            <h1 class="header"><?= $this->headline ?></h1>
+            <p class="description">
+             <?= $this->text ?>
+        </p>
+        <div class="buttons">
+            <a class="button-white" href="#test">Get in touch</a>
+            <a class="button-white" href="#test">White label program</a>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
+<?php $this->endblock(); ?>
+            
