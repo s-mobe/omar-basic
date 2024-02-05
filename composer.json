@@ -1,0 +1,34 @@
+{
+    "name": "s-mobe/omar-basic",
+    "description": "Contao Bundle for url on Contao 4.x",
+    "homepage": "https://github.com/",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "contao package",
+            "email": "test@test.me",
+            "homepage": "www.test.me",
+            "role": "Full Stack Developer"
+        }
+    ],
+    "require": {
+        "contao/core-bundle": "4.13.*"
+    },
+    "extra": {
+        "contao-manager-plugin": "omar\\basic\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "omar\\basic\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    }
+}
